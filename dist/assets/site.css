@@ -328,6 +328,23 @@ a { color: inherit; text-underline-offset: .22em; }
   .case-next a { display: inline-flex; align-items: center; }
 }
 @media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+
+  .site-header { view-transition-name: site-header; }
+  .hero-copy, .case-header { view-transition-name: page-intro; }
+
+  ::view-transition-group(root) { animation-duration: 220ms; }
+  ::view-transition-group(site-header),
+  ::view-transition-group(page-intro) { animation: none; }
+  ::view-transition-old(site-header),
+  ::view-transition-old(page-intro) { animation: none; opacity: 0; }
+  ::view-transition-new(site-header) { animation: none; }
+  ::view-transition-new(page-intro) { animation: page-intro-enter 220ms ease-out both; }
+  :root:dir(rtl) { --intro-entry-offset: -.65rem; }
+  @keyframes page-intro-enter {
+    from { translate: var(--intro-entry-offset, .65rem); opacity: .78; }
+  }
+
   .feature:is(:hover, :has(.feature-link:focus-visible)) .payment-plot,
   .feature:is(:hover, :has(.feature-link:focus-visible)) .signal-path { transform: translateY(-.24rem); }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .document-sheet:nth-child(3) { transform: translate(-50%, -55%); }
@@ -337,8 +354,6 @@ a { color: inherit; text-underline-offset: .22em; }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .evidence-card:first-child { transform: translate(-76%, -69%) rotate(-21deg); }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .evidence-card:nth-child(2) { transform: translate(-29%, -48%) rotate(3deg); }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .fraud-radar::before { rotate: 42deg; }
-  .hero-copy { animation: arrive 500ms ease-out both; }
-  @keyframes arrive { from { transform: translateY(.55rem); } to { transform: translateY(0); } }
   @supports (animation-timeline: view()) and (animation-range: entry 0% entry 100%) {
     .profile-photo, .profile-skills, .about-copy > h2, .about-copy > p,
     .about-copy > h3, .career-list li {
