@@ -330,6 +330,8 @@ a { color: inherit; text-underline-offset: .22em; }
 @media (prefers-reduced-motion: no-preference) {
   @view-transition { navigation: auto; }
 
+  :root:has(#work:target, #about:target) { scroll-behavior: smooth; }
+
   .site-header { view-transition-name: site-header; }
   .hero-copy, .case-header { view-transition-name: page-intro; }
 
