@@ -96,11 +96,14 @@ export function mountWorkflowScene(workflow, visual, canvas, context) {
   const signal = mesh(scene, new THREE.SphereGeometry(0.125, 20, 14), blue, 0, 0.12, 0);
   signal.visible = false;
 
+  const activeLift = 0.29;
   let active = controls.findIndex(control => control.checked);
+  stages[active].position.y = activeLift;
   let from = active;
   let started = null;
   let frame = 0;
   let visible = false;
+  let sized = false;
   let lost = false;
 
   function draw(now) {
@@ -111,7 +114,7 @@ export function mountWorkflowScene(workflow, visual, canvas, context) {
     const eased = progress * (2 - progress);
     let settling = false;
     for (const [index, stage] of stages.entries()) {
-      const lift = index === active ? 0.29 : 0;
+      const lift = index === active ? activeLift : 0;
       stage.position.y = motion.matches ? lift : THREE.MathUtils.lerp(stage.position.y, lift, 0.16);
       halos[index].opacity = index === active ? 0.86 : 0.15;
       settling ||= Math.abs(stage.position.y - lift) > 0.002;
@@ -124,7 +127,7 @@ export function mountWorkflowScene(workflow, visual, canvas, context) {
   }
 
   function requestDraw() {
-    if (!frame && visible && !lost && !document.hidden) frame = requestAnimationFrame(draw);
+    if (!frame && visible && sized && !lost && !document.hidden) frame = requestAnimationFrame(draw);
   }
 
   const resizeObserver = new ResizeObserver(() => {
@@ -141,6 +144,7 @@ export function mountWorkflowScene(workflow, visual, canvas, context) {
     camera.updateProjectionMatrix();
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
     renderer.setSize(width, height, false);
+    sized = true;
     requestDraw();
   });
   resizeObserver.observe(visual);
@@ -169,4 +173,3 @@ export function mountWorkflowScene(workflow, visual, canvas, context) {
     viewportObserver.disconnect();
   }, { once: true });
 }
-

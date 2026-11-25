@@ -63,19 +63,13 @@ a { color: inherit; text-underline-offset: .22em; }
 .workflow-header h2 { margin-block-start: .36rem; font-size: clamp(1.38rem, 3vw, 2.05rem); letter-spacing: -.045em; }
 .workflow-visual { position: relative; aspect-ratio: 2.55; isolation: isolate; background: radial-gradient(ellipse at 50% 55%, #e1e8ff 0, transparent 68%); }
 .workflow-visual::before { position: absolute; z-index: -1; inset: 2% 6%; opacity: .7; background: radial-gradient(#8aa2e66b 1px, transparent 1px) 0 0 / 1.2rem 1.2rem; mask-image: radial-gradient(ellipse, #000 11%, transparent 71%); content: ""; }
-.workflow-canvas { position: absolute; inset: 0; display: block; inline-size: 100%; block-size: 100%; opacity: 0; transition: opacity 160ms ease; }
-.workflow[data-rendered] .workflow-canvas { opacity: 1; }
-.workflow[data-rendered] .workflow-fallback { visibility: hidden; }
-.workflow-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8%; }
-.workflow-fallback::before { position: absolute; inset: 50% 20% auto; border-block-start: 2px dashed #7188e0; content: ""; }
-.workflow-fallback span { position: relative; display: grid; place-content: center; inline-size: 18%; aspect-ratio: 1; border: 1px solid #7589e0; border-radius: .7rem; color: var(--blue-dark); background: #ecf0ff; box-shadow: 0 .4rem .8rem #2539811a; }
-.workflow-fallback span::before { font: 700 clamp(1rem, 4vw, 2.2rem)/1 var(--display); }
-.fallback-data::before { content: "▤"; }
-.fallback-model::before { content: "✳"; }
-.fallback-review::before { content: "✓"; }
-.workflow:has([value="data"]:checked) .fallback-data,
-.workflow:has([value="model"]:checked) .fallback-model,
-.workflow:has([value="review"]:checked) .fallback-review { background: var(--blue); color: var(--white); }
+.workflow-canvas, .workflow-preview { position: absolute; inset: 0; display: block; inline-size: 100%; block-size: 100%; }
+.workflow-canvas, .workflow-preview-model, .workflow-preview-review { visibility: hidden; }
+.workflow:where(:has([value="model"]:checked, [value="review"]:checked)) .workflow-preview-data { visibility: hidden; }
+.workflow:where(:has([value="model"]:checked)) .workflow-preview-model,
+.workflow:where(:has([value="review"]:checked)) .workflow-preview-review,
+.workflow[data-rendered] .workflow-canvas { visibility: visible; }
+.workflow[data-rendered] .workflow-preview { visibility: hidden; }
 .workflow-steps { min-inline-size: 0; margin: 0; padding: 0 clamp(1.05rem, 3vw, 1.75rem) .9rem; border: 0; }
 .workflow-steps legend { padding: 0; margin-block-end: .5rem; font-size: .875rem; color: var(--muted); }
 .workflow-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; }
