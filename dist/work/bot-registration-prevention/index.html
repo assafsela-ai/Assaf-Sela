@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="We tested whether a model could spot automated registrations before giving it any say in who could sign up.">
+  <meta property="og:title" content="Bot Registration Prevention | Assaf Sela">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="We tested whether a model could spot automated registrations before giving it any say in who could sign up.">
+  <meta property="og:image" content="../../assets/social-preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Assaf Sela, AI Leadership &amp; Product, with a portrait">
+  <meta property="og:site_name" content="Assaf Sela">
+  <link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <title>Bot Registration Prevention | Assaf Sela</title>
+  <link rel="preload" href="../../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">AS</span> Assaf Sela</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="../../#work">Work</a>
+        <a href="../../#about">About</a>
+        <a class="nav-contact" href="https://www.linkedin.com/in/assafse/">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="wrap case-page">
+    <article aria-labelledby="case-title">
+      <header class="case-header">
+        <a class="text-link back-link" href="../../#work">All projects</a>
+        <p class="eyebrow">Fraud prevention · Customer journey</p>
+        <h1 id="case-title">Bot Registration Prevention</h1>
+        <p class="case-intro">We tested whether a model could spot automated registrations before giving it any say in who could sign up.</p>
+        <p class="case-meta">evoke · 2025</p>
+      </header>
+      <figure class="case-diagram bot-diagram" aria-labelledby="diagram-title">
+        <figcaption id="diagram-title">Measure while the sign-up flow continues</figcaption>
+        <ol class="flow-list" role="list">
+          <li><strong>Keep sign-up running</strong><span>Customers continue through the existing registration flow.</span></li>
+          <li><strong>Score in parallel</strong><span>The model records results separately for evaluation.</span></li>
+          <li><strong>Review the evidence</strong><span>Check signal quality, response time and behavior when the model fails.</span></li>
+        </ol>
+      </figure>
+      <div class="case-body">
+        <section>
+          <h2>The problem</h2>
+          <p>Automated accounts were using stolen or synthetic identities to abuse bonuses. We wanted to catch that activity without making registration harder for legitimate customers.</p>
+        </section>
+        <section>
+          <h2>The decision</h2>
+          <p>We designed the first phase as a parallel evaluation. The model ran alongside sign-up and stored its outputs in Snowflake. Those outputs did not change what customers experienced. We could then assess the results before deciding whether the model should influence registration.</p>
+        </section>
+        <section>
+          <h2>What we looked for</h2>
+          <p>I focused on what the model would need to prove before it could affect sign-up: a useful signal, a fast response and a registration flow that could keep running if the model failed. The evaluation gave the team scores to review in Snowflake while customers continued through the existing sign-up flow.</p>
+        </section>
+        <a class="text-link linkedin-post" href="https://lnkd.in/p/dAi5gBsw">
+          <img src="../../assets/linkedin-icon.png" alt="" width="28" height="24">
+          Read the original LinkedIn post
+        </a>
+      </div>
+    </article>
+    <nav class="case-next" aria-label="Next case study">
+      <p class="eyebrow">Next case study</p>
+      <a href="../personalized-deposit-recommendation/">Personalized Deposit Recommendation</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer site-footer-compact">
+    <div class="wrap footer-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">AS</span> Assaf Sela</a>
+      <a class="text-link" href="https://www.linkedin.com/in/assafse/">Connect on LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>
