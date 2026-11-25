@@ -298,6 +298,7 @@ a { color: inherit; text-underline-offset: .22em; }
   .about-grid { grid-template-areas: "portrait bio" "skills bio"; grid-template-rows: max-content 1fr; }
 }
 @media (max-width: 45rem) {
+  .case-header h1 { max-inline-size: none; font-size: clamp(2rem, 1rem + 5vw, 3.6rem); line-height: 1.06; overflow-wrap: break-word; }
   .hero-inner, .about-grid, .adoption-grid, .flow-list { grid-template-columns: minmax(0, 1fr); }
   .hero-inner { gap: 1.75rem; padding-block-end: 2rem; }
   .hero-copy { margin-block-start: 0; }
@@ -320,6 +321,11 @@ a { color: inherit; text-underline-offset: .22em; }
 @media (max-width: 22rem) {
   .main-nav { inline-size: 100%; }
   .career-list li { grid-template-columns: minmax(0, 1fr); }
+}
+@media (pointer: coarse) {
+  .main-nav a { min-inline-size: 2.75rem; justify-content: center; }
+  .workflow .button, .demo-input-row input, .case-next a { min-block-size: 2.75rem; }
+  .case-next a { display: inline-flex; align-items: center; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .feature:is(:hover, :has(.feature-link:focus-visible)) .payment-plot,
