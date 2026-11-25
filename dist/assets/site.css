@@ -333,16 +333,27 @@ a { color: inherit; text-underline-offset: .22em; }
   .site-header { view-transition-name: site-header; }
   .hero-copy, .case-header { view-transition-name: page-intro; }
 
-  ::view-transition-group(root) { animation-duration: 220ms; }
+  :root { --page-slide-direction: 1; }
+  :root:dir(rtl) { --page-slide-direction: -1; }
+
+  ::view-transition-group(root),
   ::view-transition-group(site-header),
   ::view-transition-group(page-intro) { animation: none; }
+  ::view-transition-old(root),
+  ::view-transition-new(root) { mix-blend-mode: normal; }
+  ::view-transition-old(root) { animation: page-content-exit 180ms ease-out both; }
+  ::view-transition-new(root) { animation: page-content-enter 360ms cubic-bezier(.2, .65, .3, 1) both; }
   ::view-transition-old(site-header),
   ::view-transition-old(page-intro) { animation: none; opacity: 0; }
   ::view-transition-new(site-header) { animation: none; }
-  ::view-transition-new(page-intro) { animation: page-intro-enter 220ms ease-out both; }
-  :root:dir(rtl) { --intro-entry-offset: -.65rem; }
+  ::view-transition-new(page-intro) { animation: page-intro-enter 400ms cubic-bezier(.2, .65, .3, 1) both; }
+
+  @keyframes page-content-exit { to { opacity: 0; } }
+  @keyframes page-content-enter {
+    from { translate: calc(var(--page-slide-direction) * clamp(.85rem, 2.5vw, 1.75rem)); }
+  }
   @keyframes page-intro-enter {
-    from { translate: var(--intro-entry-offset, .65rem); opacity: .78; }
+    from { translate: calc(var(--page-slide-direction) * clamp(2rem, 5vw, 3.5rem)); opacity: .2; }
   }
 
   .feature:is(:hover, :has(.feature-link:focus-visible)) .payment-plot,
