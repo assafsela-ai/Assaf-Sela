@@ -45,6 +45,10 @@ a { color: inherit; text-underline-offset: .22em; }
 .main-nav a { text-decoration: none; color: var(--muted); }
 .main-nav a:hover { color: var(--blue-dark); text-decoration: underline; }
 .main-nav .nav-contact { color: var(--blue-dark); }
+.main-nav .nav-icon { justify-content: center; inline-size: 2rem; border-radius: .5rem; }
+.main-nav .nav-icon:hover { background: var(--tint); }
+.social-mark { flex: none; inline-size: 1.2rem; block-size: auto; }
+.social-link { gap: .45rem; }
 .text-link { color: var(--blue-dark); }
 .eyebrow { color: var(--blue-dark); font-size: .875rem; font-weight: 650; letter-spacing: .025em; line-height: 1.35; }
 .hero { overflow: clip; position: relative; isolation: isolate; background: radial-gradient(ellipse at 82% 46%, #e1e8ff 0, #eff2fd 36%, var(--paper) 67%); }
@@ -257,6 +261,7 @@ a { color: inherit; text-underline-offset: .22em; }
 .footer-inner { padding-block: clamp(2rem, 6vw, 5rem); }
 .footer-inner p { margin-block-start: .45rem; color: #e0e6ff; }
 .site-footer .button { background: var(--white); color: var(--blue-dark); }
+.footer-links { display: flex; flex-wrap: wrap; gap: .55rem; }
 .site-footer a:focus-visible { outline-color: var(--white); }
 .site-footer-compact .footer-inner { padding-block: 1.1rem; }
 .site-footer-compact .text-link { color: var(--white); }
@@ -298,6 +303,7 @@ a { color: inherit; text-underline-offset: .22em; }
   .about-grid { grid-template-areas: "portrait bio" "skills bio"; grid-template-rows: max-content 1fr; }
 }
 @media (max-width: 45rem) {
+  .header-inner { column-gap: .75rem; }
   .case-header h1 { max-inline-size: none; font-size: clamp(2rem, 1rem + 5vw, 3.6rem); line-height: 1.06; overflow-wrap: break-word; }
   .hero-inner, .about-grid, .adoption-grid, .flow-list { grid-template-columns: minmax(0, 1fr); }
   .hero-inner { gap: 1.75rem; padding-block-end: 2rem; }
