@@ -132,6 +132,8 @@ a { color: inherit; text-underline-offset: .22em; }
 .section-intro p { margin-block-start: .5rem; color: var(--muted); }
 .section h2, .site-footer h2 { font-size: clamp(2.55rem, 5.5vw, 5rem); }
 .work-intro { display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 1rem; }
+.work-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
+.project-jump.button { min-block-size: 2.75rem; padding: .5rem .78rem; font-size: .9rem; text-align: center; }
 .project-controls { display: flex; align-items: center; gap: .45rem; }
 .project-controls[hidden] { display: none; }
 .project-controls .project-position { margin: 0 .25rem 0 0; font-size: .875rem; font-variant-numeric: tabular-nums; }
@@ -323,8 +325,7 @@ a { color: inherit; text-underline-offset: .22em; }
   .hero-inner { gap: 1.75rem; padding-block-end: 2rem; }
   .hero-copy { margin-block-start: 0; }
   .workflow { inline-size: 100%; }
-  .project-controls { inline-size: 100%; }
-  .project-controls .project-position { margin-inline-end: auto; }
+  .work-actions { inline-size: 100%; justify-content: space-between; }
   .feature-grid { grid-template-columns: minmax(0, 1fr); }
   .feature-grid.is-carousel { grid-auto-columns: 100%; scrollbar-width: none; padding-block-end: .2rem; }
   .feature-grid.is-carousel::-webkit-scrollbar { display: none; }
@@ -337,6 +338,12 @@ a { color: inherit; text-underline-offset: .22em; }
   .flow-list li { padding: .05rem 0 .75rem .86rem; border-block-start: 0; border-inline-start: 1px solid #8193e1; }
   .flow-list li::before { inset: .45rem auto auto -.3rem; }
   .bot-diagram li:nth-child(2) { border-inline-start-style: dashed; }
+}
+@media (max-width: 25rem) {
+  .work-actions { align-items: start; gap: .45rem; }
+  .project-jump.button { padding-inline: .65rem; }
+  .project-controls { display: grid; grid-template-columns: repeat(2, auto); gap: .25rem .4rem; }
+  .project-controls .project-position { grid-row: 2; grid-column: 1 / -1; margin: 0; }
 }
 @media (max-width: 22rem) {
   .main-nav { inline-size: 100%; }

@@ -5,6 +5,7 @@ const previous = controls.querySelector('[data-step="previous"]');
 const next = controls.querySelector('[data-step="next"]');
 const position = controls.querySelector(".project-position");
 const progress = document.querySelector(".project-progress");
+const jump = document.querySelector(".project-jump");
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const tolerance = 2;
 let settleTimer;
@@ -122,6 +123,12 @@ previous.addEventListener("click", () => {
 });
 next.addEventListener("click", () => {
   if (next.getAttribute("aria-disabled") !== "true") scrollOne(1);
+});
+jump.addEventListener("click", (event) => {
+  if (event.defaultPrevented || event.button !== 0 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  event.preventDefault();
+  if (location.hash !== jump.hash) history.pushState(history.state, "", jump.hash);
+  alignLinkedProject();
 });
 track.addEventListener("keydown", (event) => {
   if (event.target !== track || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
