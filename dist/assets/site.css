@@ -235,6 +235,25 @@ a { color: inherit; text-underline-offset: .22em; }
 .fraud-radar i:nth-child(2) { --x: 67%; --y: 28%; background: #f7e8a5; box-shadow: 0 0 .55rem #f5df9d; }
 .fraud-radar i:nth-child(3) { --x: 57%; --y: 76%; }
 .ticket-art { background: radial-gradient(ellipse at 78% 6%, #5caaec, #335dc7 54%, #203791); }
+.analytics-art { background: radial-gradient(ellipse at 78% 14%, #7964c7, #49368c 52%, #2a2455); }
+.analytics-plot {
+  position: relative; inline-size: clamp(9rem, 16vw, 13rem); block-size: clamp(5rem, 9vw, 7rem);
+  border: 1px solid #ded4ff80; border-radius: .78rem; background: #30265d;
+  box-shadow: 0 .8rem 2rem #201a4878;
+}
+.analytics-plot::before {
+  position: absolute; inset: .7rem; content: "";
+  background: repeating-linear-gradient(to bottom, #dacfff30 0 1px, transparent 1px 25%),
+    linear-gradient(to right, transparent 57%, #dacfff38 57% 58%, transparent 58%);
+}
+.analytics-plot i { position: absolute; inset: .7rem; background: #ddd2ff; }
+.analytics-plot i:first-child {
+  clip-path: polygon(0 33%, 20% 24%, 38% 31%, 57% 21%, 76% 27%, 100% 19%, 100% 24%, 76% 32%, 57% 26%, 38% 36%, 20% 29%, 0 38%);
+}
+.analytics-plot i:last-child {
+  background: #a8e5e2;
+  clip-path: polygon(0 46%, 20% 38%, 38% 43%, 57% 36%, 69% 74%, 83% 68%, 100% 73%, 100% 78%, 83% 73%, 69% 79%, 57% 41%, 38% 48%, 20% 43%, 0 51%);
+}
 .workbench-art { background: radial-gradient(ellipse at 50% 30%, #fff7e8, #e9d6be); }
 .workbench-art .document-sheet { background: #fffbf3; border-color: #ac8a65; }
 .workbench-art .document-sheet i { background: #ac8a65; }
@@ -410,6 +429,7 @@ a { color: inherit; text-underline-offset: .22em; }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .evidence-card:first-child { transform: translate(-76%, -69%) rotate(-21deg); }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .evidence-card:nth-child(2) { transform: translate(-29%, -48%) rotate(3deg); }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .fraud-radar::before { rotate: 42deg; }
+  .feature:is(:hover, :focus-within) .analytics-plot { transform: translateY(-.24rem); }
   .feature-heading:is(:hover, :focus-visible) .incident-timeline { transform: translateY(-.24rem); }
   .feature-heading:is(:hover, :focus-visible) .aml-network { transform: translateY(-.24rem); }
   @supports (animation-timeline: view()) and (animation-range: entry 0% entry 100%) {
