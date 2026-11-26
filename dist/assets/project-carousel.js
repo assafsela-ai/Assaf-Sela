@@ -6,6 +6,10 @@ const next = controls.querySelector('[data-step="next"]');
 const position = controls.querySelector(".project-position");
 const progress = document.querySelector(".project-progress");
 const jump = document.querySelector(".project-jump");
+const independentHash = jump.hash;
+const independentLabel = jump.textContent;
+const independentStart = cards.findIndex((card) => `#${card.id}` === independentHash);
+const evokeHash = `#${cards[0].id}`;
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const tolerance = 2;
 let settleTimer;
@@ -55,8 +59,16 @@ function scrollOne(direction) {
 
 function alignLinkedProject() {
   const id = window.location.hash.slice(1);
-  const index = cards.findIndex((card) => id && card.id === id);
-  if (index >= 0) scrollToOffset(Math.min(cardOffsets()[index], endOffset()));
+  const index = !id || id === "work" ? 0 : cards.findIndex((card) => card.id === id);
+  if (index < 0) return;
+
+  const showReturn = index >= independentStart;
+  const destination = showReturn ? evokeHash : independentHash;
+  if (jump.hash !== destination) {
+    jump.setAttribute("href", destination);
+    jump.textContent = showReturn ? "Back to evoke" : independentLabel;
+  }
+  scrollToOffset(Math.min(cardOffsets()[index], endOffset()));
 }
 
 function finishMouseDrag(event) {
