@@ -39,6 +39,13 @@ function updateControls() {
     const label = `${first === last ? first : `${first}–${last}`} of ${cards.length}`;
     if (position.textContent !== label) position.textContent = label;
     progress.value = last;
+
+    const showReturn = last >= independentStart + 1;
+    const destination = showReturn ? evokeHash : independentHash;
+    if (jump.hash !== destination) {
+      jump.setAttribute("href", destination);
+      jump.textContent = showReturn ? "Back to evoke" : independentLabel;
+    }
   }
   previous.setAttribute("aria-disabled", String(left <= tolerance));
   next.setAttribute("aria-disabled", String(left >= endOffset() - tolerance));
@@ -60,15 +67,7 @@ function scrollOne(direction) {
 function alignLinkedProject() {
   const id = window.location.hash.slice(1);
   const index = !id || id === "work" ? 0 : cards.findIndex((card) => card.id === id);
-  if (index < 0) return;
-
-  const showReturn = index >= independentStart;
-  const destination = showReturn ? evokeHash : independentHash;
-  if (jump.hash !== destination) {
-    jump.setAttribute("href", destination);
-    jump.textContent = showReturn ? "Back to evoke" : independentLabel;
-  }
-  scrollToOffset(Math.min(cardOffsets()[index], endOffset()));
+  if (index >= 0) scrollToOffset(Math.min(cardOffsets()[index], endOffset()));
 }
 
 function finishMouseDrag(event) {
@@ -153,10 +152,14 @@ track.addEventListener("keydown", (event) => {
   }
   event.preventDefault();
 });
-track.addEventListener("scroll", () => {
-  clearTimeout(settleTimer);
-  settleTimer = setTimeout(updateControls, 120);
-}, { passive: true });
+if ("onscrollend" in track) {
+  track.addEventListener("scrollend", updateControls);
+} else {
+  track.addEventListener("scroll", () => {
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(updateControls, 120);
+  }, { passive: true });
+}
 const resizeObserver = new ResizeObserver(updateControls);
 track.classList.add("is-carousel", "mouse-draggable");
 progress.max = cards.length;

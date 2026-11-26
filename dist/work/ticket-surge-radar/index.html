@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="I built a radar that spots spikes in support tickets and gives the team the evidence to decide whether to open an incident.">
+  <meta property="og:title" content="Ticket Surge Radar | Assaf Sela">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="I built a radar that spots spikes in support tickets and gives the team the evidence to decide whether to open an incident.">
+  <meta property="og:image" content="../../assets/social-preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Assaf Sela, AI Leadership &amp; Product, with a portrait">
+  <meta property="og:site_name" content="Assaf Sela">
+  <link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <title>Ticket Surge Radar | Assaf Sela</title>
+  <link rel="preload" href="../../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/site.css?v=4">
+  <link rel="expect" href="#page-intro" blocking="render" media="(prefers-reduced-motion: no-preference)">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">AS</span> Assaf Sela</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="../../#work">Work</a>
+        <a href="../../#about">About</a>
+        <a class="nav-contact social-link" href="https://www.linkedin.com/in/assafse/" target="_blank" rel="noopener noreferrer">
+          <img class="social-mark" src="../../assets/linkedin-icon.png" width="72" height="61" alt="">
+          LinkedIn
+        </a>
+        <a class="nav-icon" href="https://github.com/assafsela-ai" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img class="social-mark" src="../../assets/github-icon.png" width="294" height="288" alt="">
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="wrap case-page">
+    <article aria-labelledby="case-title">
+      <header class="case-header" id="page-intro">
+        <a class="text-link back-link" href="../../#ticket-surge-radar">Back to projects</a>
+        <p class="eyebrow">Support operations</p>
+        <h1 id="case-title">Ticket Surge Radar</h1>
+        <p class="case-intro">I built a radar that spots spikes in support tickets and gives the team the evidence to decide whether to open an incident.</p>
+        <p class="case-meta">Independent project</p>
+      </header>
+      <figure class="case-diagram" aria-labelledby="diagram-title">
+        <figcaption id="diagram-title">From support tickets to an incident draft</figcaption>
+        <ol class="flow-list" role="list">
+          <li><strong>Group incoming tickets</strong><span>Find related reports even when customers describe the same issue in different words.</span></li>
+          <li><strong>Compare with recent history</strong><span>Check the latest time window against earlier windows for the same topic.</span></li>
+          <li><strong>Review and share</strong><span>Open the source tickets and use the counts and examples to draft an incident brief.</span></li>
+        </ol>
+      </figure>
+      <div class="case-body">
+        <section>
+          <h2>The problem</h2>
+          <p>A broken checkout can show up as several different complaints. A support lead needs to know whether those reports point to one growing problem.</p>
+        </section>
+        <section>
+          <h2>The decision</h2>
+          <p>I used a small text classifier to group reports, then used a separate count check to flag spikes. The brief links back to the source tickets so the team can check the pattern and investigate the cause.</p>
+        </section>
+        <section>
+          <h2>What you can try</h2>
+          <p>Run the fictional checkout replay. It shows 18 related reports in the latest six-hour window, up from an average of two in earlier windows. You can also load a support CSV and analyze it in your browser.</p>
+        </section>
+        <div class="feature-actions">
+          <a class="feature-action" href="https://assafsela-ai.github.io/ticket-surge-radar/" target="_blank" rel="noopener noreferrer">Open the live demo</a>
+          <a class="feature-action social-link" href="https://github.com/assafsela-ai/ticket-surge-radar" target="_blank" rel="noopener noreferrer"><img class="social-mark" src="../../assets/github-icon.png" width="294" height="288" alt="">View on GitHub</a>
+        </div>
+      </div>
+    </article>
+    <nav class="case-next" aria-label="Project navigation">
+      <a href="../../#ticket-surge-radar">Back to projects</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer site-footer-compact">
+    <div class="wrap footer-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">AS</span> Assaf Sela</a>
+      <a class="text-link social-link" href="https://www.linkedin.com/in/assafse/" target="_blank" rel="noopener noreferrer">
+        <img class="social-mark" src="../../assets/linkedin-icon.png" width="72" height="61" alt="">
+        Connect on LinkedIn
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
