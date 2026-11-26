@@ -254,6 +254,11 @@ a { color: inherit; text-underline-offset: .22em; }
   background: #a8e5e2;
   clip-path: polygon(0 46%, 20% 38%, 38% 43%, 57% 36%, 69% 74%, 83% 68%, 100% 73%, 100% 78%, 83% 73%, 69% 79%, 57% 41%, 38% 48%, 20% 43%, 0 51%);
 }
+.analytics-plot::after {
+  position: absolute; inset: .7rem; content: "";
+  background: radial-gradient(circle at 57% 39%, #fff4cc 0 .19rem, #ffbf72 .2rem .33rem, transparent .36rem);
+  opacity: .55;
+}
 .workbench-art { background: radial-gradient(ellipse at 50% 30%, #fff7e8, #e9d6be); }
 .workbench-art .document-sheet { background: #fffbf3; border-color: #ac8a65; }
 .workbench-art .document-sheet i { background: #ac8a65; }
@@ -429,7 +434,10 @@ a { color: inherit; text-underline-offset: .22em; }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .evidence-card:first-child { transform: translate(-76%, -69%) rotate(-21deg); }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .evidence-card:nth-child(2) { transform: translate(-29%, -48%) rotate(3deg); }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .fraud-radar::before { rotate: 42deg; }
-  .feature:is(:hover, :focus-within) .analytics-plot { transform: translateY(-.24rem); }
+  .analytics-plot::after { transition: opacity 240ms ease-out; }
+  .feature:is(:hover, :has(.feature-heading:focus-visible)) .analytics-plot { transform: translateY(-.7rem) rotate(-4deg) scale(1.08); }
+  .feature:is(:hover, :has(.feature-heading:focus-visible)) .analytics-plot::after { opacity: 1; }
+  .feature:has(.feature-heading:active) .analytics-plot { transform: translateY(-.2rem) scale(.98); }
   .feature-heading:is(:hover, :focus-visible) .incident-timeline { transform: translateY(-.24rem); }
   .feature-heading:is(:hover, :focus-visible) .aml-network { transform: translateY(-.24rem); }
   @supports (animation-timeline: view()) and (animation-range: entry 0% entry 100%) {
