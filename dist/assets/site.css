@@ -338,6 +338,16 @@ a { color: inherit; text-underline-offset: .22em; }
 .flow-list span { color: var(--muted); }
 .payment-diagram li:nth-child(2)::before, .document-diagram li:nth-child(3)::before, .bot-diagram li:nth-child(2)::before { background: var(--blue); }
 .bot-diagram li:nth-child(2) { border-block-start-style: dashed; }
+.case-demo { margin-block-start: clamp(1.2rem, 3vw, 2rem); }
+.case-demo a {
+  display: block;
+  overflow: clip;
+  border: 1px solid var(--line);
+  border-radius: 1.15rem;
+}
+.case-demo a:is(:hover, :focus-visible) { border-color: var(--blue-dark); }
+.case-demo img { inline-size: 100%; block-size: auto; }
+.case-demo figcaption { margin-block-start: .65rem; color: var(--muted); font-size: .9375rem; }
 .case-body { max-inline-size: 66ch; margin-inline: auto; padding-block: clamp(2.45rem, 6vw, 5.5rem); }
 .case-body section + section { margin-block-start: 1.85rem; }
 .case-body h2 { margin-block-end: .45rem; font-size: clamp(1.65rem, 3.6vw, 2.6rem); }
