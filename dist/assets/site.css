@@ -260,7 +260,8 @@ a { color: inherit; text-underline-offset: .22em; }
   opacity: .55;
 }
 .ml-lab-art { background: #182128; }
-.ml-lab-art img { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; object-fit: cover; }
+.onboarding-lab-art { background: #f5f5fa; }
+:is(.ml-lab-art, .onboarding-lab-art) img { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; object-fit: cover; }
 .workbench-art { background: radial-gradient(ellipse at 50% 30%, #fff7e8, #e9d6be); }
 .workbench-art .document-sheet { background: #fffbf3; border-color: #ac8a65; }
 .workbench-art .document-sheet i { background: #ac8a65; }
@@ -452,6 +453,7 @@ a { color: inherit; text-underline-offset: .22em; }
   .feature:has(.feature-heading:active) .analytics-plot { transform: translateY(-.2rem) scale(.98); }
   .feature:is(:hover, :has(.feature-heading:focus-visible)) .ml-lab-art img { transform: translateY(-.5rem) scale(1.14); }
   .feature:has(.feature-heading:active) .ml-lab-art img { transform: scale(1.035); }
+  .feature:is(:hover, :has(.feature-heading:focus-visible)) .onboarding-lab-art img { transform: scale(1.045); }
   .feature-heading:is(:hover, :focus-visible) .incident-timeline { transform: translateY(-.24rem); }
   .feature-heading:is(:hover, :focus-visible) .aml-network { transform: translateY(-.24rem); }
   @supports (animation-timeline: view()) and (animation-range: entry 0% entry 100%) {
