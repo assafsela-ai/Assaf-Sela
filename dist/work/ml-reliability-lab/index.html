@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="I built an interactive lab to test how much we can trust an image classifier’s score.">
+  <meta property="og:title" content="ML Reliability Lab | Assaf Sela">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="I built an interactive lab to test how much we can trust an image classifier’s score.">
+  <meta property="og:image" content="../../assets/social-preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Assaf Sela, AI Leadership &amp; Product, with a portrait">
+  <meta property="og:site_name" content="Assaf Sela">
+  <link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <title>ML Reliability Lab | Assaf Sela</title>
+  <link rel="preload" href="../../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/site.css?v=11">
+  <link rel="expect" href="#page-intro" blocking="render" media="(prefers-reduced-motion: no-preference)">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">AS</span> Assaf Sela</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="../../#work">Work</a>
+        <a href="../../#about">About</a>
+        <a class="nav-contact social-link" href="https://www.linkedin.com/in/assafse/" target="_blank" rel="noopener noreferrer">
+          <img class="social-mark" src="../../assets/linkedin-icon.png" width="72" height="61" alt="">
+          LinkedIn
+        </a>
+        <a class="nav-icon" href="https://github.com/assafsela-ai" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img class="social-mark" src="../../assets/github-icon.png" width="294" height="288" alt="">
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="wrap case-page">
+    <article aria-labelledby="case-title">
+      <header class="case-header" id="page-intro">
+        <a class="text-link back-link" href="../../#ml-reliability-lab">Back to projects</a>
+        <p class="eyebrow">Machine learning · Model evaluation</p>
+        <h1 id="case-title">ML Reliability Lab</h1>
+        <p class="case-intro">I built an interactive lab to test how much we can trust an image classifier’s score.</p>
+        <p class="case-meta">Independent project</p>
+      </header>
+      <figure class="case-diagram" aria-labelledby="diagram-title">
+        <figcaption id="diagram-title">Three checks on one image classifier</figcaption>
+        <ol class="flow-list" role="list">
+          <li><strong>Split by video</strong><span>Keep nearby frames from the same recording together.</span></li>
+          <li><strong>Swap the background</strong><span>Change the background color and compare predictions for the same object.</span></li>
+          <li><strong>Review training labels</strong><span>Inspect flagged images and measure what changes after you correct them.</span></li>
+        </ol>
+      </figure>
+      <figure class="case-demo">
+        <a href="https://assafsela-ai.github.io/ml-reliability-lab/" target="_blank" rel="noopener noreferrer" aria-label="Open the live demo">
+          <img src="../../assets/ml-reliability-lab-case.webp" width="1168" height="381" loading="lazy" decoding="async" alt="Two images show the same bottle on teal and violet backgrounds. The model predicts can after the swap.">
+        </a>
+        <figcaption>The model calls this bottle a can after the background changes from teal to violet.</figcaption>
+      </figure>
+      <div class="case-body">
+        <section>
+          <h2>The problem</h2>
+          <p>A high accuracy score can hide problems in the data. Similar frames can appear in both training and testing, a model can rely on background color, and the training labels can be wrong.</p>
+        </section>
+        <section>
+          <h2>What the tests showed</h2>
+          <p>With frames from the same six videos in training and testing, the model got 12 of 12 test images right. Keeping each video in one split brought that down to 8 of 12 on the same test images. In a separate test, correcting six training labels improved the score from 4 to 8 out of 12 on a fixed test set.</p>
+        </section>
+        <section>
+          <h2>How I built it</h2>
+          <p>The browser generates synthetic images, samples their RGB values and fits a nearest-neighbor classifier. The <code>vision-data-audit</code> skill uses the same checks in Codex and Claude Code. It reads the capture groups, image features and paired predictions that users supply for their own projects.</p>
+        </section>
+        <section>
+          <h2>What you can try</h2>
+          <p>Change the split, swap a background or approve a label correction. Each action reruns the relevant check in the browser. The demo needs no account or API key.</p>
+        </section>
+        <div class="feature-actions">
+          <a class="feature-action" href="https://assafsela-ai.github.io/ml-reliability-lab/" target="_blank" rel="noopener noreferrer">Open the live demo</a>
+          <a class="feature-action social-link" href="https://github.com/assafsela-ai/ml-reliability-lab" target="_blank" rel="noopener noreferrer"><img class="social-mark" src="../../assets/github-icon.png" width="294" height="288" alt="">View on GitHub</a>
+        </div>
+      </div>
+    </article>
+    <nav class="case-next" aria-label="Project navigation">
+      <a href="../../#ml-reliability-lab">Back to projects</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer site-footer-compact">
+    <div class="wrap footer-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">AS</span> Assaf Sela</a>
+      <a class="text-link social-link" href="https://www.linkedin.com/in/assafse/" target="_blank" rel="noopener noreferrer">
+        <img class="social-mark" src="../../assets/linkedin-icon.png" width="72" height="61" alt="">
+        Connect on LinkedIn
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
