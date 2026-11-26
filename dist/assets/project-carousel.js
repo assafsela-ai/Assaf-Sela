@@ -52,6 +52,12 @@ function scrollOne(direction) {
   scrollToOffset(Math.min(target, endOffset()));
 }
 
+function alignLinkedProject() {
+  const id = window.location.hash.slice(1);
+  const index = cards.findIndex((card) => id && card.id === id);
+  if (index >= 0) scrollToOffset(Math.min(cardOffsets()[index], endOffset()));
+}
+
 function finishMouseDrag(event) {
   if (!mouseDrag || mouseDrag.pointerId !== event.pointerId) return;
   const { active } = mouseDrag;
@@ -141,3 +147,5 @@ track.tabIndex = 0;
 track.setAttribute("aria-roledescription", "carousel");
 controls.hidden = false;
 progress.hidden = false;
+window.addEventListener("hashchange", alignLinkedProject);
+alignLinkedProject();

@@ -157,6 +157,9 @@ a { color: inherit; text-underline-offset: .22em; }
 .feature h3 { margin-block: .5rem .65rem; max-inline-size: 19ch; font-size: clamp(1.55rem, 2.25vw, 2.45rem); }
 .feature-copy > p:not(.eyebrow) { max-inline-size: 36ch; color: var(--muted); }
 .feature-action { display: inline-block; padding-block: .75rem .1rem; margin-block-start: auto; color: var(--blue-dark); font-size: .9375rem; font-weight: 650; text-decoration: underline; }
+.feature-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 0 1rem; margin-block-start: auto; }
+.feature-actions .feature-action { display: inline-flex; align-items: center; min-block-size: 2.75rem; margin-block-start: 0; }
+.feature-actions .social-mark { inline-size: .9rem; }
 .project-art { position: relative; isolation: isolate; display: grid; place-content: center; min-block-size: 11rem; aspect-ratio: 1.7; inline-size: 100%; overflow: hidden; }
 .project-art > * { transition: transform 320ms ease; }
 .payment-plot, .signal-path, .lineage-map, .report-panel { transform: translateY(0); }
@@ -223,6 +226,17 @@ a { color: inherit; text-underline-offset: .22em; }
 .fraud-radar i:nth-child(1) { --x: 32%; --y: 37%; }
 .fraud-radar i:nth-child(2) { --x: 67%; --y: 28%; background: #f7e8a5; box-shadow: 0 0 .55rem #f5df9d; }
 .fraud-radar i:nth-child(3) { --x: 57%; --y: 76%; }
+.ticket-art { background: radial-gradient(ellipse at 78% 6%, #5caaec, #335dc7 54%, #203791); }
+.workbench-art { background: radial-gradient(ellipse at 50% 30%, #fff7e8, #e9d6be); }
+.workbench-art .document-sheet { background: #fffbf3; border-color: #ac8a65; }
+.workbench-art .document-sheet i { background: #ac8a65; }
+.lens-art { background: radial-gradient(ellipse at 50% 45%, #513e7b, #211933 72%); }
+.schedule-art { background: radial-gradient(ellipse at 22% 20%, #456fb0, #25345f 80%); }
+.skills-art { background: radial-gradient(ellipse at 70% 15%, #e2edff, #bccbef 74%); }
+.skills-stack { display: grid; gap: .32rem; inline-size: 7.1rem; rotate: -7deg; }
+.skills-stack i { display: block; block-size: 1.25rem; border: 1px solid #728bc9; border-radius: .32rem; background: linear-gradient(90deg, #8da5e0 23%, #f7f9ff 23%); box-shadow: 0 .2rem .55rem #293d7740; }
+.skills-stack i:nth-child(2) { translate: .5rem 0; }
+.skills-stack i:nth-child(3) { translate: 1rem 0; }
 .career-list, .flow-list { margin: 0; padding: 0; list-style: none; }
 .about-section { background: radial-gradient(ellipse at 8% 0%, #e0e7ff, transparent 59%), #e9edfb; }
 .about-grid { display: grid; grid-template-columns: minmax(0, .76fr) minmax(0, 1.2fr); grid-template-areas: "portrait bio" ". skills"; align-items: start; gap: 1.2rem clamp(2rem, 7vw, 7rem); }
