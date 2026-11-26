@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="I built a browser lab for practicing IT incident triage with simulated metrics, logs, traces and change records.">
+  <meta property="og:title" content="IT Incident Lab | Assaf Sela">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="I built a browser lab for practicing IT incident triage with simulated metrics, logs, traces and change records.">
+  <meta property="og:image" content="../../assets/social-preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Assaf Sela, AI Leadership &amp; Product, with a portrait">
+  <meta property="og:site_name" content="Assaf Sela">
+  <link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <title>IT Incident Lab | Assaf Sela</title>
+  <link rel="preload" href="../../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/site.css?v=6">
+  <link rel="expect" href="#page-intro" blocking="render" media="(prefers-reduced-motion: no-preference)">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">AS</span> Assaf Sela</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="../../#work">Work</a>
+        <a href="../../#about">About</a>
+        <a class="nav-contact social-link" href="https://www.linkedin.com/in/assafse/" target="_blank" rel="noopener noreferrer">
+          <img class="social-mark" src="../../assets/linkedin-icon.png" width="72" height="61" alt="">
+          LinkedIn
+        </a>
+        <a class="nav-icon" href="https://github.com/assafsela-ai" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img class="social-mark" src="../../assets/github-icon.png" width="294" height="288" alt="">
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="wrap case-page">
+    <article aria-labelledby="case-title">
+      <header class="case-header" id="page-intro">
+        <a class="text-link back-link" href="../../#it-incident-lab">Back to projects</a>
+        <p class="eyebrow">IT operations</p>
+        <h1 id="case-title">IT Incident Lab</h1>
+        <p class="case-intro">I built a browser lab for practicing IT incident triage with simulated metrics, logs, traces and change records.</p>
+        <p class="case-meta">Independent project</p>
+      </header>
+      <figure class="case-diagram" aria-labelledby="diagram-title">
+        <figcaption id="diagram-title">From an alert to the next check</figcaption>
+        <ol class="flow-list" role="list">
+          <li><strong>Define the impact</strong><span>Find which service, requests and users are affected.</span></li>
+          <li><strong>Build a timeline</strong><span>Line up metrics, logs, traces and changes. Check which records support each possible cause.</span></li>
+          <li><strong>Choose the next check</strong><span>Pick one read-only check that could confirm or weaken the leading theory.</span></li>
+        </ol>
+      </figure>
+      <div class="case-body">
+        <section>
+          <h2>The problem</h2>
+          <p>When a service fails or slows down, several things can look like the cause. I wanted a way to practice sorting through those signals and explaining what the evidence supports.</p>
+        </section>
+        <section>
+          <h2>The decision</h2>
+          <p>I built the demo and the <code>incident-triage</code> skill around the same cases. In Codex and Claude Code, the skill uses the records you provide to summarize the impact, build a timeline with source references, rank possible causes and suggest a read-only check.</p>
+        </section>
+        <section>
+          <h2>What you can try</h2>
+          <p>Investigate a checkout outage where only some payments fail, or find out why search slows down while request volume stays steady. Use the guided replay to inspect the evidence, then reveal the case answer to compare it with your own reasoning.</p>
+        </section>
+        <div class="feature-actions">
+          <a class="feature-action" href="https://assafsela-ai.github.io/it-incident-lab/" target="_blank" rel="noopener noreferrer">Open the live demo</a>
+          <a class="feature-action social-link" href="https://github.com/assafsela-ai/it-incident-lab" target="_blank" rel="noopener noreferrer"><img class="social-mark" src="../../assets/github-icon.png" width="294" height="288" alt="">View on GitHub</a>
+        </div>
+      </div>
+    </article>
+    <nav class="case-next" aria-label="Project navigation">
+      <a href="../../#it-incident-lab">Back to projects</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer site-footer-compact">
+    <div class="wrap footer-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">AS</span> Assaf Sela</a>
+      <a class="text-link social-link" href="https://www.linkedin.com/in/assafse/" target="_blank" rel="noopener noreferrer">
+        <img class="social-mark" src="../../assets/linkedin-icon.png" width="72" height="61" alt="">
+        Connect on LinkedIn
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
