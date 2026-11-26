@@ -245,6 +245,11 @@ a { color: inherit; text-underline-offset: .22em; }
 .incident-timeline::before { content: ""; position: absolute; inset-block-start: 50%; inset-inline: 1.2rem; block-size: 1px; background: #dcadb8; }
 .incident-timeline i { position: relative; inline-size: .64rem; aspect-ratio: 1; border: 1px solid #f2cad0; border-radius: 50%; background: #995874; }
 .incident-timeline i:nth-child(3) { background: #ffcd97; box-shadow: 0 0 0 .24rem #ffcd9740, 0 0 1rem #ffcd97a0; }
+.aml-art { background: radial-gradient(ellipse at 78% 14%, #32856e, #1b564c 48%, #173536 86%); }
+.aml-network { position: relative; display: flex; align-items: center; justify-content: space-between; inline-size: clamp(9rem, 16vw, 13rem); }
+.aml-network::before { content: ""; position: absolute; inset-inline: 1rem; inset-block-start: 50%; block-size: 2px; background: #a5dbc4; }
+.aml-network i { position: relative; inline-size: 1.85rem; aspect-ratio: 1; border: 1px solid #a5dbc4; border-radius: .42rem; background: #285a50; box-shadow: 0 .6rem 1.25rem #102f3480; }
+.aml-network i:nth-child(2) { inline-size: 2.55rem; border-color: #cbf8e1; background: #65aa8c; box-shadow: 0 0 0 .26rem #a5dbc433, 0 .65rem 1.3rem #102f3480; }
 .skills-art { background: radial-gradient(ellipse at 70% 15%, #e2edff, #bccbef 74%); }
 .skills-stack { display: grid; gap: .32rem; inline-size: 7.1rem; rotate: -7deg; }
 .skills-stack i { display: block; block-size: 1.25rem; border: 1px solid #728bc9; border-radius: .32rem; background: linear-gradient(90deg, #8da5e0 23%, #f7f9ff 23%); box-shadow: 0 .2rem .55rem #293d7740; }
@@ -406,6 +411,7 @@ a { color: inherit; text-underline-offset: .22em; }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .evidence-card:nth-child(2) { transform: translate(-29%, -48%) rotate(3deg); }
   .feature:is(:hover, :has(.feature-link:focus-visible)) .fraud-radar::before { rotate: 42deg; }
   .feature-heading:is(:hover, :focus-visible) .incident-timeline { transform: translateY(-.24rem); }
+  .feature-heading:is(:hover, :focus-visible) .aml-network { transform: translateY(-.24rem); }
   @supports (animation-timeline: view()) and (animation-range: entry 0% entry 100%) {
     .profile-photo, .profile-skills, .about-copy > h2, .about-copy > p,
     .about-copy > h3, .career-list li {
