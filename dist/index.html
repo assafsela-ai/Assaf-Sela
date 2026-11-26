@@ -135,202 +135,187 @@
     </section>
 
     <section class="wrap section work-section" id="work" aria-labelledby="work-title">
-      <div class="section-intro">
-        <h2 id="work-title">Projects</h2>
-        <p>AI, data and automation work from evoke and my independent projects.</p>
-      </div>
-      <div class="project-tabs" role="tablist" aria-label="Project groups" hidden>
-        <button type="button" id="tab-evoke" role="tab" aria-selected="true" aria-controls="evoke-projects">evoke</button>
-        <button type="button" id="tab-independent" role="tab" aria-selected="false" aria-controls="independent-projects" tabindex="-1">Independent projects</button>
-      </div>
-      <section class="project-group" id="evoke-projects" aria-labelledby="evoke-projects-heading">
-        <h3 class="project-group-title" id="evoke-projects-heading">evoke</h3>
+      <div class="section-intro work-intro">
+        <div>
+          <h2 id="work-title">Projects</h2>
+          <p>AI, data and automation projects from my work at evoke and my independent projects.</p>
+          <a class="text-link" href="#ticket-surge-radar">Browse open-source projects</a>
+        </div>
         <div class="project-controls" hidden>
           <p class="project-position" role="status"></p>
           <button type="button" class="project-step" data-step="previous" aria-label="Previous projects" aria-controls="project-carousel"><span aria-hidden="true"></span></button>
           <button type="button" class="project-step" data-step="next" aria-label="Next projects" aria-controls="project-carousel"><span aria-hidden="true"></span></button>
         </div>
-        <div class="feature-grid" id="project-carousel" role="group" aria-label="evoke project cards">
-          <article class="feature">
-            <div class="project-art payment-art" aria-hidden="true">
-              <div class="payment-ring"></div>
-              <div class="payment-plot"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="feature-grid" id="project-carousel" role="group" aria-label="Project cards">
+        <article class="feature">
+          <div class="project-art payment-art" aria-hidden="true">
+            <div class="payment-ring"></div>
+            <div class="payment-plot"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Payments · Personalization</p>
+            <h3 id="deposit-title">Personalized Deposit Recommendation</h3>
+            <p>How we kept recommendations responsive in a live payment flow.</p>
+            <a class="feature-link feature-action" id="deposit-action" href="./work/personalized-deposit-recommendation/" aria-labelledby="deposit-action deposit-title">Read case study</a>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="project-art document-art" aria-hidden="true">
+            <div class="document-sheet"></div>
+            <div class="document-sheet"></div>
+            <div class="document-sheet"><i></i><i></i><i></i></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Operations · Document verification</p>
+            <h3 id="idp-title">Intelligent Document Processing</h3>
+            <p>What we did with documents that had already failed a check.</p>
+            <a class="feature-link feature-action" id="idp-action" href="./work/intelligent-document-processing/" aria-labelledby="idp-action idp-title">Read case study</a>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="project-art bot-art" aria-hidden="true">
+            <div class="signal-path"><i></i><i></i><i></i></div>
+            <div class="signal-path"><i></i><i></i><i></i></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Fraud prevention · Customer journey</p>
+            <h3 id="bot-title">Bot Registration Prevention</h3>
+            <p>What we needed to prove before a model could affect sign-ups.</p>
+            <a class="feature-link feature-action" id="bot-action" href="./work/bot-registration-prevention/" aria-labelledby="bot-action bot-title">Read case study</a>
+          </div>
+        </article>
+        <article class="feature" id="more-projects">
+          <div class="project-art compliance-art" aria-hidden="true">
+            <div class="certificate"><i></i><i></i><b></b></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Compliance · Workflow automation</p>
+            <h3 id="compliance-certification-title">Compliance Certification</h3>
+            <p>Putting reviewable evidence behind a certification decision.</p>
+            <a class="feature-link feature-action" id="compliance-certification-action" href="./work/compliance-certification/" aria-labelledby="compliance-certification-action compliance-certification-title">Read case study</a>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="project-art lineage-art" aria-hidden="true">
+            <div class="lineage-map"><b></b><b></b><b></b><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Data products · Field-level lineage</p>
+            <h3 id="source-to-target-lineage-title">Source-to-Target Lineage</h3>
+            <p>Tracing fields through complex data flows with evidence people can inspect.</p>
+            <a class="feature-link feature-action" id="source-to-target-lineage-action" href="./work/source-to-target-lineage/" aria-labelledby="source-to-target-lineage-action source-to-target-lineage-title">Read case study</a>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="project-art report-art" aria-hidden="true">
+            <div class="report-panel"><div class="report-ring"></div><div class="report-bars"><i></i><i></i><i></i><i></i></div></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Customer feedback · Reporting</p>
+            <h3 id="nps-reporting-title">NPS Reporting</h3>
+            <p>Turning open-text customer feedback into recurring reports.</p>
+            <a class="feature-link feature-action" id="nps-reporting-action" href="./work/nps-reporting/" aria-labelledby="nps-reporting-action nps-reporting-title">Read case study</a>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="project-art chargeback-art" aria-hidden="true">
+            <div class="evidence-card"></div><div class="evidence-card"><i></i><i></i><b></b></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Payments · Operations</p>
+            <h3 id="chargeback-representment-title">Chargeback Representment</h3>
+            <p>Helping operations teams assemble consistent, auditable evidence.</p>
+            <a class="feature-link feature-action" id="chargeback-representment-action" href="./work/chargeback-representment/" aria-labelledby="chargeback-representment-action chargeback-representment-title">Read case study</a>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="project-art fraud-art" aria-hidden="true">
+            <div class="fraud-radar"><i></i><i></i><i></i></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Risk · Anomaly detection</p>
+            <h3 id="fraud-protection-title">Fraud Protection</h3>
+            <p>Helping analysts spot suspicious patterns and decide what to investigate first.</p>
+            <a class="feature-link feature-action" id="fraud-protection-action" href="./work/fraud-protection/" aria-labelledby="fraud-protection-action fraud-protection-title">Read case study</a>
+          </div>
+        </article>
+        <article class="feature" id="ticket-surge-radar" aria-labelledby="ticket-surge-radar-title">
+          <div class="project-art payment-art ticket-art" aria-hidden="true">
+            <div class="payment-ring"></div>
+            <div class="payment-plot"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Independent · Support operations</p>
+            <h3 id="ticket-surge-radar-title">Ticket Surge Radar</h3>
+            <p>Spot spikes in support tickets, review the tickets behind each signal, and draft an incident brief.</p>
+            <div class="feature-actions">
+              <a class="feature-action" id="ticket-surge-radar-demo" href="https://assafsela-ai.github.io/ticket-surge-radar/" target="_blank" rel="noopener noreferrer" aria-labelledby="ticket-surge-radar-demo ticket-surge-radar-title">Live demo</a>
+              <a class="feature-action social-link" id="ticket-surge-radar-repo" href="https://github.com/assafsela-ai/ticket-surge-radar" target="_blank" rel="noopener noreferrer" aria-labelledby="ticket-surge-radar-repo ticket-surge-radar-title"><img class="social-mark" src="./assets/github-icon.png" width="294" height="288" alt="">GitHub</a>
             </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Payments · Personalization</p>
-              <h3 id="deposit-title">Personalized Deposit Recommendation</h3>
-              <p>How we kept recommendations responsive in a live payment flow.</p>
-              <a class="feature-link feature-action" id="deposit-action" href="./work/personalized-deposit-recommendation/" aria-labelledby="deposit-action deposit-title">Read case study</a>
+          </div>
+        </article>
+        <article class="feature" id="legal-ops-workbench" aria-labelledby="legal-ops-workbench-title">
+          <div class="project-art document-art workbench-art" aria-hidden="true">
+            <div class="document-sheet"></div>
+            <div class="document-sheet"></div>
+            <div class="document-sheet"><i></i><i></i><i></i></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Independent · Legal operations</p>
+            <h3 id="legal-ops-workbench-title">Legal Ops Workbench</h3>
+            <p>Follow a fictional vendor review from the first contract change to the launch decision. Each finding links to the source that supports it.</p>
+            <div class="feature-actions">
+              <a class="feature-action" id="legal-ops-workbench-demo" href="https://assafsela-ai.github.io/legal-ops-workbench/" target="_blank" rel="noopener noreferrer" aria-labelledby="legal-ops-workbench-demo legal-ops-workbench-title">Live demo</a>
+              <a class="feature-action social-link" id="legal-ops-workbench-repo" href="https://github.com/assafsela-ai/legal-ops-workbench" target="_blank" rel="noopener noreferrer" aria-labelledby="legal-ops-workbench-repo legal-ops-workbench-title"><img class="social-mark" src="./assets/github-icon.png" width="294" height="288" alt="">GitHub</a>
             </div>
-          </article>
-          <article class="feature">
-            <div class="project-art document-art" aria-hidden="true">
-              <div class="document-sheet"></div>
-              <div class="document-sheet"></div>
-              <div class="document-sheet"><i></i><i></i><i></i></div>
+          </div>
+        </article>
+        <article class="feature" id="fraud-lens" aria-labelledby="fraud-lens-title">
+          <div class="project-art fraud-art lens-art" aria-hidden="true">
+            <div class="fraud-radar"><i></i><i></i><i></i></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Independent · Fraud investigation</p>
+            <h3 id="fraud-lens-title">Fraud Lens</h3>
+            <p>Investigate a fictional job scam, from the first suspicious message to a report backed by evidence.</p>
+            <div class="feature-actions">
+              <a class="feature-action" id="fraud-lens-demo" href="https://assafsela-ai.github.io/fraud-lens/" target="_blank" rel="noopener noreferrer" aria-labelledby="fraud-lens-demo fraud-lens-title">Live demo</a>
+              <a class="feature-action social-link" id="fraud-lens-repo" href="https://github.com/assafsela-ai/fraud-lens" target="_blank" rel="noopener noreferrer" aria-labelledby="fraud-lens-repo fraud-lens-title"><img class="social-mark" src="./assets/github-icon.png" width="294" height="288" alt="">GitHub</a>
             </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Operations · Document verification</p>
-              <h3 id="idp-title">Intelligent Document Processing</h3>
-              <p>What we did with documents that had already failed a check.</p>
-              <a class="feature-link feature-action" id="idp-action" href="./work/intelligent-document-processing/" aria-labelledby="idp-action idp-title">Read case study</a>
+          </div>
+        </article>
+        <article class="feature" id="project-risk-radar" aria-labelledby="project-risk-radar-title">
+          <div class="project-art bot-art schedule-art" aria-hidden="true">
+            <div class="signal-path"><i></i><i></i><i></i></div>
+            <div class="signal-path"><i></i><i></i><i></i></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Independent · Project management</p>
+            <h3 id="project-risk-radar-title">Project Risk Radar</h3>
+            <p>See how a supplier update changes a launch forecast and which tasks move on the schedule.</p>
+            <div class="feature-actions">
+              <a class="feature-action" id="project-risk-radar-demo" href="https://assafsela-ai.github.io/project-risk-radar/" target="_blank" rel="noopener noreferrer" aria-labelledby="project-risk-radar-demo project-risk-radar-title">Live demo</a>
+              <a class="feature-action social-link" id="project-risk-radar-repo" href="https://github.com/assafsela-ai/project-risk-radar" target="_blank" rel="noopener noreferrer" aria-labelledby="project-risk-radar-repo project-risk-radar-title"><img class="social-mark" src="./assets/github-icon.png" width="294" height="288" alt="">GitHub</a>
             </div>
-          </article>
-          <article class="feature">
-            <div class="project-art bot-art" aria-hidden="true">
-              <div class="signal-path"><i></i><i></i><i></i></div>
-              <div class="signal-path"><i></i><i></i><i></i></div>
+          </div>
+        </article>
+        <article class="feature" id="skills" aria-labelledby="skills-title">
+          <div class="project-art skills-art" aria-hidden="true">
+            <div class="skills-stack"><i></i><i></i><i></i></div>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Independent · AI agent workflows</p>
+            <h3 id="skills-title">Skills</h3>
+            <p>Explore reusable skills for Codex and Claude, including tools for specs, support tickets, and AI evaluations.</p>
+            <div class="feature-actions">
+              <a class="feature-action" id="skills-demo" href="https://assafsela-ai.github.io/Skills/" target="_blank" rel="noopener noreferrer" aria-labelledby="skills-demo skills-title">Live catalog</a>
+              <a class="feature-action social-link" id="skills-repo" href="https://github.com/assafsela-ai/Skills" target="_blank" rel="noopener noreferrer" aria-labelledby="skills-repo skills-title"><img class="social-mark" src="./assets/github-icon.png" width="294" height="288" alt="">GitHub</a>
             </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Fraud prevention · Customer journey</p>
-              <h3 id="bot-title">Bot Registration Prevention</h3>
-              <p>What we needed to prove before a model could affect sign-ups.</p>
-              <a class="feature-link feature-action" id="bot-action" href="./work/bot-registration-prevention/" aria-labelledby="bot-action bot-title">Read case study</a>
-            </div>
-          </article>
-          <article class="feature" id="more-projects">
-            <div class="project-art compliance-art" aria-hidden="true">
-              <div class="certificate"><i></i><i></i><b></b></div>
-            </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Compliance · Workflow automation</p>
-              <h3 id="compliance-certification-title">Compliance Certification</h3>
-              <p>Putting reviewable evidence behind a certification decision.</p>
-              <a class="feature-link feature-action" id="compliance-certification-action" href="./work/compliance-certification/" aria-labelledby="compliance-certification-action compliance-certification-title">Read case study</a>
-            </div>
-          </article>
-          <article class="feature">
-            <div class="project-art lineage-art" aria-hidden="true">
-              <div class="lineage-map"><b></b><b></b><b></b><i></i><i></i><i></i><i></i></div>
-            </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Data products · Field-level lineage</p>
-              <h3 id="source-to-target-lineage-title">Source-to-Target Lineage</h3>
-              <p>Tracing fields through complex data flows with evidence people can inspect.</p>
-              <a class="feature-link feature-action" id="source-to-target-lineage-action" href="./work/source-to-target-lineage/" aria-labelledby="source-to-target-lineage-action source-to-target-lineage-title">Read case study</a>
-            </div>
-          </article>
-          <article class="feature">
-            <div class="project-art report-art" aria-hidden="true">
-              <div class="report-panel"><div class="report-ring"></div><div class="report-bars"><i></i><i></i><i></i><i></i></div></div>
-            </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Customer feedback · Reporting</p>
-              <h3 id="nps-reporting-title">NPS Reporting</h3>
-              <p>Turning open-text customer feedback into recurring reports.</p>
-              <a class="feature-link feature-action" id="nps-reporting-action" href="./work/nps-reporting/" aria-labelledby="nps-reporting-action nps-reporting-title">Read case study</a>
-            </div>
-          </article>
-          <article class="feature">
-            <div class="project-art chargeback-art" aria-hidden="true">
-              <div class="evidence-card"></div><div class="evidence-card"><i></i><i></i><b></b></div>
-            </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Payments · Operations</p>
-              <h3 id="chargeback-representment-title">Chargeback Representment</h3>
-              <p>Helping operations teams assemble consistent, auditable evidence.</p>
-              <a class="feature-link feature-action" id="chargeback-representment-action" href="./work/chargeback-representment/" aria-labelledby="chargeback-representment-action chargeback-representment-title">Read case study</a>
-            </div>
-          </article>
-          <article class="feature">
-            <div class="project-art fraud-art" aria-hidden="true">
-              <div class="fraud-radar"><i></i><i></i><i></i></div>
-            </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Risk · Anomaly detection</p>
-              <h3 id="fraud-protection-title">Fraud Protection</h3>
-              <p>Helping analysts spot suspicious patterns and decide what to investigate first.</p>
-              <a class="feature-link feature-action" id="fraud-protection-action" href="./work/fraud-protection/" aria-labelledby="fraud-protection-action fraud-protection-title">Read case study</a>
-            </div>
-          </article>
-        </div>
-        <progress class="project-progress" aria-hidden="true" hidden></progress>
-      </section>
-      <section class="project-group" id="independent-projects" aria-labelledby="independent-projects-heading">
-        <h3 class="project-group-title" id="independent-projects-heading">Independent projects</h3>
-        <div class="project-controls" hidden>
-          <p class="project-position" role="status"></p>
-          <button type="button" class="project-step" data-step="previous" aria-label="Previous projects" aria-controls="independent-carousel"><span aria-hidden="true"></span></button>
-          <button type="button" class="project-step" data-step="next" aria-label="Next projects" aria-controls="independent-carousel"><span aria-hidden="true"></span></button>
-        </div>
-        <div class="feature-grid" id="independent-carousel" role="group" aria-label="Independent projects project cards">
-          <article class="feature" id="ticket-surge-radar" aria-labelledby="ticket-surge-radar-title">
-            <div class="project-art payment-art ticket-art" aria-hidden="true">
-              <div class="payment-ring"></div>
-              <div class="payment-plot"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Independent · Support operations</p>
-              <h3 id="ticket-surge-radar-title">Ticket Surge Radar</h3>
-              <p>Spot spikes in support tickets, review the tickets behind each signal, and draft an incident brief.</p>
-              <div class="feature-actions">
-                <a class="feature-action" id="ticket-surge-radar-demo" href="https://assafsela-ai.github.io/ticket-surge-radar/" target="_blank" rel="noopener noreferrer" aria-labelledby="ticket-surge-radar-demo ticket-surge-radar-title">Live demo</a>
-                <a class="feature-action social-link" id="ticket-surge-radar-repo" href="https://github.com/assafsela-ai/ticket-surge-radar" target="_blank" rel="noopener noreferrer" aria-labelledby="ticket-surge-radar-repo ticket-surge-radar-title"><img class="social-mark" src="./assets/github-icon.png" width="294" height="288" alt="">GitHub</a>
-              </div>
-            </div>
-          </article>
-          <article class="feature" id="legal-ops-workbench" aria-labelledby="legal-ops-workbench-title">
-            <div class="project-art document-art workbench-art" aria-hidden="true">
-              <div class="document-sheet"></div>
-              <div class="document-sheet"></div>
-              <div class="document-sheet"><i></i><i></i><i></i></div>
-            </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Independent · Legal operations</p>
-              <h3 id="legal-ops-workbench-title">Legal Ops Workbench</h3>
-              <p>Follow a fictional vendor review from the first contract change to the launch decision. Each finding links to the source that supports it.</p>
-              <div class="feature-actions">
-                <a class="feature-action" id="legal-ops-workbench-demo" href="https://assafsela-ai.github.io/legal-ops-workbench/" target="_blank" rel="noopener noreferrer" aria-labelledby="legal-ops-workbench-demo legal-ops-workbench-title">Live demo</a>
-                <a class="feature-action social-link" id="legal-ops-workbench-repo" href="https://github.com/assafsela-ai/legal-ops-workbench" target="_blank" rel="noopener noreferrer" aria-labelledby="legal-ops-workbench-repo legal-ops-workbench-title"><img class="social-mark" src="./assets/github-icon.png" width="294" height="288" alt="">GitHub</a>
-              </div>
-            </div>
-          </article>
-          <article class="feature" id="fraud-lens" aria-labelledby="fraud-lens-title">
-            <div class="project-art fraud-art lens-art" aria-hidden="true">
-              <div class="fraud-radar"><i></i><i></i><i></i></div>
-            </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Independent · Fraud investigation</p>
-              <h3 id="fraud-lens-title">Fraud Lens</h3>
-              <p>Investigate a fictional job scam, from the first suspicious message to a report backed by evidence.</p>
-              <div class="feature-actions">
-                <a class="feature-action" id="fraud-lens-demo" href="https://assafsela-ai.github.io/fraud-lens/" target="_blank" rel="noopener noreferrer" aria-labelledby="fraud-lens-demo fraud-lens-title">Live demo</a>
-                <a class="feature-action social-link" id="fraud-lens-repo" href="https://github.com/assafsela-ai/fraud-lens" target="_blank" rel="noopener noreferrer" aria-labelledby="fraud-lens-repo fraud-lens-title"><img class="social-mark" src="./assets/github-icon.png" width="294" height="288" alt="">GitHub</a>
-              </div>
-            </div>
-          </article>
-          <article class="feature" id="project-risk-radar" aria-labelledby="project-risk-radar-title">
-            <div class="project-art bot-art schedule-art" aria-hidden="true">
-              <div class="signal-path"><i></i><i></i><i></i></div>
-              <div class="signal-path"><i></i><i></i><i></i></div>
-            </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Independent · Project management</p>
-              <h3 id="project-risk-radar-title">Project Risk Radar</h3>
-              <p>See how a supplier update changes a launch forecast and which tasks move on the schedule.</p>
-              <div class="feature-actions">
-                <a class="feature-action" id="project-risk-radar-demo" href="https://assafsela-ai.github.io/project-risk-radar/" target="_blank" rel="noopener noreferrer" aria-labelledby="project-risk-radar-demo project-risk-radar-title">Live demo</a>
-                <a class="feature-action social-link" id="project-risk-radar-repo" href="https://github.com/assafsela-ai/project-risk-radar" target="_blank" rel="noopener noreferrer" aria-labelledby="project-risk-radar-repo project-risk-radar-title"><img class="social-mark" src="./assets/github-icon.png" width="294" height="288" alt="">GitHub</a>
-              </div>
-            </div>
-          </article>
-          <article class="feature" id="skills" aria-labelledby="skills-title">
-            <div class="project-art skills-art" aria-hidden="true">
-              <div class="skills-stack"><i></i><i></i><i></i></div>
-            </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Independent · AI agent workflows</p>
-              <h3 id="skills-title">Skills</h3>
-              <p>Explore reusable skills for Codex and Claude, including tools for specs, support tickets, and AI evaluations.</p>
-              <div class="feature-actions">
-                <a class="feature-action" id="skills-demo" href="https://assafsela-ai.github.io/Skills/" target="_blank" rel="noopener noreferrer" aria-labelledby="skills-demo skills-title">Live catalog</a>
-                <a class="feature-action social-link" id="skills-repo" href="https://github.com/assafsela-ai/Skills" target="_blank" rel="noopener noreferrer" aria-labelledby="skills-repo skills-title"><img class="social-mark" src="./assets/github-icon.png" width="294" height="288" alt="">GitHub</a>
-              </div>
-            </div>
-          </article>
-        </div>
-        <progress class="project-progress" aria-hidden="true" hidden></progress>
-      </section>
+          </div>
+        </article>
+      </div>
+      <progress class="project-progress" aria-hidden="true" hidden></progress>
     </section>
 
     <section class="about-section" id="about" aria-labelledby="about-title">
