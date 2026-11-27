@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="I built a DevOps lab to show how a green health check can hide a broken rollback.">
+  <meta property="og:title" content="Release Reliability Lab | Assaf Sela">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="I built a DevOps lab to show how a green health check can hide a broken rollback.">
+  <meta property="og:image" content="../../assets/social-preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Assaf Sela, AI Leadership &amp; Product, with a portrait">
+  <meta property="og:site_name" content="Assaf Sela">
+  <link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <title>Release Reliability Lab | Assaf Sela</title>
+  <link rel="preload" href="../../assets/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/site.css?v=6">
+  <link rel="expect" href="#page-intro" blocking="render" media="(prefers-reduced-motion: no-preference)">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">AS</span> Assaf Sela</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="../../#work">Work</a>
+        <a href="../../#about">About</a>
+        <a class="nav-contact social-link" href="https://www.linkedin.com/in/assafse/" target="_blank" rel="noopener noreferrer">
+          <img class="social-mark" src="../../assets/linkedin-icon.png" width="72" height="61" alt="">
+          LinkedIn
+        </a>
+        <a class="nav-icon" href="https://github.com/assafsela-ai" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img class="social-mark" src="../../assets/github-icon.png" width="294" height="288" alt="">
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="wrap case-page">
+    <article aria-labelledby="case-title">
+      <header class="case-header" id="page-intro">
+        <a class="text-link back-link" href="../../#release-reliability-lab">Back to projects</a>
+        <p class="eyebrow">DevOps · Release reliability</p>
+        <h1 id="case-title">Release Reliability Lab</h1>
+        <p class="case-intro">I built a DevOps lab to show how a green health check can hide a broken rollback.</p>
+        <p class="case-meta">Independent project</p>
+      </header>
+      <figure class="case-diagram" aria-labelledby="diagram-title">
+        <figcaption id="diagram-title">The health check passed. The order read failed.</figcaption>
+        <a href="https://assafsela-ai.github.io/release-reliability-lab/"><img src="../../assets/release-reliability-lab.webp" width="1122" height="680" alt="Release timeline with a failed rollback and PostgreSQL error 42703." loading="lazy" decoding="async"></a>
+      </figure>
+      <div class="case-body">
+        <section>
+          <h2>What went wrong</h2>
+          <p>Version 2 renames an orders column. The rollout passes its checks. When version 1 comes back, its database connection works, but its old query fails because the column no longer exists.</p>
+        </section>
+        <section>
+          <h2>How I tested it</h2>
+          <p>The lab runs both migration paths against in-memory PostgreSQL and replays the results in the browser. The compatible path keeps the original write column and adds a readable alias. The CI checks verify that both versions can work with orders created during the rollout.</p>
+        </section>
+        <section>
+          <h2>What you can try</h2>
+          <p>Run each path, compare the rollback outcomes, and download the evidence. Then use the Codex or Claude Code skills to diagnose the first causal error and review whether a release is ready to roll back.</p>
+        </section>
+        <div class="feature-actions">
+          <a class="feature-action" href="https://assafsela-ai.github.io/release-reliability-lab/" target="_blank" rel="noopener noreferrer">Live demo</a>
+          <a class="feature-action social-link" href="https://github.com/assafsela-ai/release-reliability-lab#agent-skills" target="_blank" rel="noopener noreferrer"><img class="social-mark" src="../../assets/github-icon.png" width="294" height="288" alt="">Get the skills</a>
+        </div>
+      </div>
+    </article>
+    <nav class="case-next" aria-label="Project navigation">
+      <a href="../../#release-reliability-lab">Back to projects</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer site-footer-compact">
+    <div class="wrap footer-inner">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">AS</span> Assaf Sela</a>
+      <a class="text-link social-link" href="https://www.linkedin.com/in/assafse/" target="_blank" rel="noopener noreferrer">
+        <img class="social-mark" src="../../assets/linkedin-icon.png" width="72" height="61" alt="">
+        Connect on LinkedIn
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

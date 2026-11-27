@@ -262,8 +262,8 @@ a.feature-heading:is(:hover, :focus-visible) h3 { color: var(--blue-dark); }
 .ml-lab-art { background: #182128; }
 .onboarding-lab-art { background: #f5f5fa; }
 .ap-payment-art { background: #eef1f6; }
-.answer-lab-art { background: #192a20; }
-:is(.ml-lab-art, .onboarding-lab-art, .ap-payment-art, .answer-lab-art) img { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; object-fit: cover; }
+.answer-lab-art, .release-lab-art { background: #192a20; }
+:is(.ml-lab-art, .onboarding-lab-art, .ap-payment-art, .answer-lab-art, .release-lab-art) img { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; object-fit: cover; }
 .workbench-art { background: radial-gradient(ellipse at 50% 30%, #fff7e8, #e9d6be); }
 .workbench-art .document-sheet { background: #fffbf3; border-color: #ac8a65; }
 .workbench-art .document-sheet i { background: #ac8a65; }
